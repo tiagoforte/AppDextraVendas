@@ -1,0 +1,22 @@
+<h4>
+    Lanches
+  </h4>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let lanche of lanches">
+        <th scope="row">
+          <a class="btn btn-primary" [routerLink]="['/lanches',lanche.id]">Editar</a>
+        </th>
+        <td>{{lanche.nome}}</td>
+        <td>{{lanche.valor}}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,22 @@
+<h4>
+  Ingredientes
+</h4>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ingrediente of ingredientes">
+      <th scope="row">
+        <a class="btn btn-primary" [routerLink]="['/ingredientes',ingrediente.id]">Editar</a>
+      </th>
+      <td>{{ingrediente.nome}}</td>
+      <td>{{ingrediente.valor}}</td>
+    </tr>
+  </tbody>
+</table>

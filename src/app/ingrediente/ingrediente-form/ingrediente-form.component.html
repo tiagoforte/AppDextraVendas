@@ -1,0 +1,20 @@
+<form [formGroup]="formulario" (ngSubmit)="salvar()">
+  <header>
+    Novo Ingrediente
+  </header>
+  <div class="form-row">
+    <div class="form-group col-md-4" [ngClass]="aplicaCssErro('nome')">
+      <label for="nome">Nome</label>
+      <input type="text" class="form-control" formControlName="nome" placeholder="Nome" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4" [ngClass]="aplicaCssErro('valor')">
+      <label for="valor">Valor</label>
+      <input type="text" class="form-control" formControlName="valor" placeholder="Valor" required>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Salvar</button>
+
+</form>
